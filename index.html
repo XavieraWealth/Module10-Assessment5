@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero App</title>
+    <style>
+        /* Your CSS from style.css */
+        .gallery img {
+            width: 100%;
+        }
+
+        h2 {
+            font-family: Impact, Fantasy;
+            text-align: center;
+            font-size: 30px;
+            color: cornflowerblue;
+            font-style: italic;
+        }
+
+        h4 {
+            font-family: Impact, fantasy;
+            font-size: 20px;
+            font-style: italic;
+            color: cornflowerblue;
+        }
+
+        p {
+            font-family: Helvetica, sans-serif;
+        }
+
+        #menu {
+            width: 100%;
+            height: 40px;
+            background-color: cornflowerblue;
+            padding-top: 12px;
+            text-align: center;
+        }
+
+        #menu a {
+            color: #ffffff;
+            font-family: Helvetica, sans-serif;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: 800;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #menu a:hover {
+            color: #5077bd;
+        }
+        
+        /* Additional styles for the single page app */
+        .page {
+            display: none;
+            padding: 20px;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .gallery a {
+            width: 200px;
+            display: block;
+            transition: transform 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .gallery a:hover {
+            transform: scale(1.05);
+        }
+        
+        .hero-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .hero-card img {
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .hero-info {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .hero-detail {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .hero-detail img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+        
+        .stats {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About Us</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <h2>Avengers Assemble!</h2>
+        <div class="gallery">
+            <a href="#" onclick="showPage('avenger1')">
+                <div class="hero-card">
+                    <img src="images/avengers_01.jpg" alt="Thor">
+                    <div class="hero-info">
+                        <h4>Thor</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#" onclick="showPage('avenger2')">
+                <div class="hero-card">
+                    <img src="images/avengers_02.jpg" alt="Iron Man">
+                    <div class="hero-info">
+                        <h4>Iron Man</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#" onclick="showPage('avenger3')">
+                <div class="hero-card">
+                    <img src="images/avengers_03.jpg" alt="Hulk">
+                    <div class="hero-info">
+                        <h4>Hulk</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#" onclick="showPage('avenger4')">
+                <div class="hero-card">
+                    <img src="images/avengers_04.jpg" alt="Hawkeye">
+                    <div class="hero-info">
+                        <h4>Hawkeye</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#" onclick="showPage('avenger5')">
+                <div class="hero-card">
+                    <img src="images/avengers_05.jpg" alt="Captain America">
+                    <div class="hero-info">
+                        <h4>Captain America</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#" onclick="showPage('avenger6')">
+                <div class="hero-card">
+                    <img src="images/avengers_06.jpg" alt="Black Widow">
+                    <div class="hero-info">
+                        <h4>Black Widow</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <h2>About us</h2>
+        <p>We are an App Development Company based in Durban South Africa.</p>
+        <p>We take pride in creating amazing apps!</p>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <h2>Contact us</h2>
+        <p>You may contact us as follows:</p>
+        <p>Phone: 031 555 2222</p>
+        <p>Email: appdeveloper@awesome.com</p>
+        <p>Website: www.awesomeness.com</p>
+    </div>
+
+    <!-- Avenger 1 - Thor -->
+    <div id="avenger1" class="page">
+        <h2>Thor</h2>
+        <div class="hero-detail">
+            <img src="images/avengers_01.jpg" alt="Thor">
+            <h4>Bio</h4>
+            <p><b>Full Name: </b> Thor Odinson</p>
+            <p><b>Place Of Birth: </b> Asgard</p>
+            <p><b>Alignment: </b> Good</p>
+            <p><b>Gender: </b> Male</p>
+            <p><b>Race: </b> Asgardian</p>
+            <br/>
+            <div class="stats">
+                <h4>Power Stats</h4>
+                <p><b>Intelligence: </b> 69%</p>
+                <p><b>Strength: </b> 100%</p>
+                <p><b>Speed: </b> 92%</p>
+                <p><b>Durability: </b> 100%</p>
+                <p><b>Power: </b> 100%</p>
+                <p><b>Combat: </b> 85%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avenger 2 - Iron Man -->
+    <div id="avenger2" class="page">
+        <h2>Iron Man</h2>
+        <div class="hero-detail">
+            <img src="images/avengers_02.jpg" alt="Iron Man">
+            <h4>Bio</h4>
+            <p><b>Full Name: </b> Tony Stark</p>
+            <p><b>Place Of Birth: </b> New York City</p>
+            <p><b>Alignment: </b> Good</p>
+            <p><b>Race: </b> Human</p>
+            <br/>
+            <div class="stats">
+                <h4>Power Stats</h4>
+                <p><b>Intelligence: </b> 100%</p>
+                <p><b>Strength: </b> 85%</p>
+                <p><b>Speed: </b> 58%</p>
+                <p><b>Durability: </b> 85%</p>
+                <p><b>Power: </b> 100%</p>
+                <p><b>Combat: </b> 64%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avenger 3 - Hulk -->
+    <div id="avenger3" class="page">
+        <h2>Hulk</h2>
+        <div class="hero-detail">
+            <img src="images/avengers_03.jpg" alt="Hulk">
+            <h4>Bio</h4>
+            <p><b>Full Name: </b> Bruce Banner</p>
+            <p><b>Place Of Birth: </b> Ohio</p>
+            <p><b>Alignment: </b> Good</p>
+            <p><b>Gender: </b> Male</p>
+            <p><b>Race: </b> Human (Radiation)</p>
+            <br/>
+            <div class="stats">
+                <h4>Power Stats</h4>
+                <p><b>Intelligence: </b> 88%</p>
+                <p><b>Strength: </b> 100%</p>
+                <p><b>Speed: </b> 47%</p>
+                <p><b>Durability: </b> 100%</p>
+                <p><b>Power: </b> 52%</p>
+                <p><b>Combat: </b> 85%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avenger 4 - Hawkeye -->
+    <div id="avenger4" class="page">
+        <h2>Hawkeye</h2>
+        <div class="hero-detail">
+            <img src="images/avengers_04.jpg" alt="Hawkeye">
+            <h4>Bio</h4>
+            <p><b>Full Name: </b> Clinton Barton</p>
+            <p><b>Place Of Birth: </b> Iowa</p>
+            <p><b>Gender: </b> Male</p>
+            <p><b>Race: </b> Human</p>
+            <br/>
+            <div class="stats">
+                <h4>Power Stats</h4>
+                <p><b>Intelligence: </b> 50%</p>
+                <p><b>Strength: </b> 12%</p>
+                <p><b>Speed: </b> 23%</p>
+                <p><b>Durability: </b> 14%</p>
+                <p><b>Power: </b> 26%</p>
+                <p><b>Combat: </b> 80%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avenger 5 - Captain America -->
+    <div id="avenger5" class="page">
+        <h2>Captain America</h2>
+        <div class="hero-detail">
+            <img src="images/avengers_05.jpg" alt="Captain America">
+            <h4>Bio</h4>
+            <p><b>Full Name: </b> Steve Rogers</p>
+            <p><b>Place Of Birth: </b> America</p>
+            <p><b>Alignment: </b> Good</p>
+            <p><b>Gender: </b> Male</p>
+            <p><b>Race: </b> Human</p>
+            <br/>
+            <div class="stats">
+                <h4>Power Stats</h4>
+                <p><b>Intelligence: </b> 63%</p>
+                <p><b>Strength: </b> 19%</p>
+                <p><b>Speed: </b> 35%</p>
+                <p><b>Durability: </b> 56%</p>
+                <p><b>Power: </b> 55%</p>
+                <p><b>Combat: </b> 100%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avenger 6 - Black Widow -->
+    <div id="avenger6" class="page">
+        <h2>Black Widow</h2>
+        <div class="hero-detail">
+            <img src="images/avengers_06.jpg" alt="Black Widow">
+            <h4>Bio</h4>
+            <p><b>Full Name: </b> Natalia Romanova</p>
+            <p><b>Place Of Birth: </b> Russia</p>
+            <p><b>Alignment: </b> Good</p>
+            <p><b>Gender: </b> Female</p>
+            <p><b>Race: </b> Human</p>
+            <br/>
+            <div class="stats">
+                <h4>Power Stats</h4>
+                <p><b>Intelligence: </b> 75%</p>
+                <p><b>Strength: </b> 13%</p>
+                <p><b>Speed: </b> 27%</p>
+                <p><b>Durability: </b> 32%</p>
+                <p><b>Power: </b> 39%</p>
+                <p><b>Combat: </b> 100%</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            var pages = document.getElementsByClassName('page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+            
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
